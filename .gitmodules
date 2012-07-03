@@ -1,5 +1,5 @@
-[submodule "alternate"]
-    path = bundle/alternate
+[submodule "a"]
+    path = bundle/a
     url = git://github.com/vim-scripts/a.vim.git
 
 [submodule "colorpack"]
