@@ -214,4 +214,21 @@ let NERDSpaceDelims=1
 
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
+if has("win32")
+    " Fix shell options
+    set shell=cmd.exe
+    set shellcmdflag=/C
+
+    " Specify swap directory
+	set directory=~/vimfiles/tmp//,$TMP
+
+	" Specify backup directory
+	set backupdir=~/vimfiles/backup/,$TMP
+
+	" Specify undo directory
+	set undodir=~/vimfiles/undo
+
+	" Fix font
+	set guifont=Consolas:h10:b:cANSI
+endif
 
