@@ -8,8 +8,21 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-" Add extra filetypes
-source ~/.vim/filetypes.vim
+" Set map leader
+let mapleader = ','
+
+" Includes
+if has("win32")
+    " Add extra filetypes
+    source ~/vimfiles/filetypes.vim
+    " Extra helper functions
+    source ~/vimfiles/functions.vim
+else
+    " Add extra filetypes
+    source ~/.vim/filetypes.vim
+    " Extra helper functions
+    source ~/.vim/functions.vim
+endif
 
 " ------------------------------- General --------------------------------
 " ------------------------------------------------------------------------
@@ -164,9 +177,6 @@ set hlsearch
 
 " ------------------------------ Mappings --------------------------------
 " ------------------------------------------------------------------------
-" Set map leader
-let mapleader = ","
-
 " Map list command
 nmap <leader>l :set list!<CR>
 
