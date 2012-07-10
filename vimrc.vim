@@ -137,7 +137,7 @@ set title
 set nowrap
 
 " Set whitespace characters to use when using list
-set listchars=eol:¶,tab:»­,trail:·
+set listchars=eol:¬,tab:»­,trail:·
 
 " Enable an warning when exceeding 80 characters
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
@@ -179,10 +179,6 @@ set hlsearch
 " ------------------------------------------------------------------------
 " Map list command
 nmap <leader>l :set list!<CR>
-
-" Map navigation commands
-nmap <C-Y> 5k
-nmap <C-E> 5j
 
 " Map CTRL+L to clear highlight search
 map <silent> <C-L> :silent nohlsearch<CR>
