@@ -1,9 +1,9 @@
 dotvim
 ======
 
-An organic Vim configuration.
+An organic Vim configuration, using Pathogen.
 
-This is more or less a representation of the `~/.vim` directory.
+This is more or less a representation of my `~/.vim` directory.
 A symlink can be used to reference the `vimrc.vim` file.
 
 In general, I'd recommend against blindly copying a `vimrc`,
@@ -21,4 +21,4 @@ First, clone the project:
 
 Then, create the symlink:
     
-    ln -s .vim/vimrc.vim ~/.vimrc
+    ln -s ~/.vim/vimrc.vim ~/.vimrc
