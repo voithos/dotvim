@@ -116,8 +116,8 @@ if has("gui_running")
     set guioptions-=T
 
     " Set theme options
-    colorscheme molokai
-    set background=dark
+    colorscheme solarized
+    set background=light
 else
     " Enable more colors for the terminal
     set t_Co=256
