@@ -6,6 +6,10 @@
     path = bundle/colorpack
     url = git://github.com/voithos/vim-colorpack.git
 
+[submodule "colors-solarized"]
+    path = bundle/colors-solarized
+    url = git://github.com/altercation/vim-colors-solarized.git
+
 [submodule "cool-syntax"]
     path = bundle/cool-syntax
     url = git://github.com/vim-scripts/cool.vim.git
