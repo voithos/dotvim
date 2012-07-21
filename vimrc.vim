@@ -139,9 +139,9 @@ set nowrap
 " Set whitespace characters to use when using list
 set listchars=eol:¬,tab:»­,trail:·
 
-" Enable an warning when exceeding 80 characters
+" Enable an warning when exceeding a certain line length
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+match OverLength /\%121v.\+/ " The configured length in the regex
 
 " Enable line numbers
 set number
