@@ -1,6 +1,6 @@
 [submodule "a"]
     path = bundle/a
-    url = git://github.com/vim-scripts/a.vim.git
+    url = git://github.com/voithos/a.vim.git
 
 [submodule "colorpack"]
     path = bundle/colorpack
