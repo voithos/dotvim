@@ -226,15 +226,15 @@ if has("win32")
     set shellcmdflag=/C
 
     " Specify swap directory
-	set directory=~/vimfiles/tmp//,$TMP
+    set directory=~/vimfiles/tmp//,$TMP
 
-	" Specify backup directory
-	set backupdir=~/vimfiles/backup/,$TMP
+    " Specify backup directory
+    set backupdir=~/vimfiles/backup/,$TMP
 
-	" Specify undo directory
-	set undodir=~/vimfiles/undo
+    " Specify undo directory
+    set undodir=~/vimfiles/undo
 
-	" Fix font
-	set guifont=Consolas:h10:b:cANSI
+    " Fix font
+    set guifont=Consolas:h10:b:cANSI
 endif
 
