@@ -97,12 +97,6 @@ set smarttab
 " Make the indent carry to the next line
 set autoindent
 
-" Make sure that <BS> deletes a "shiftwidth" worth of spaces
-set smarttab
-
-" Make the indent carry to the next line
-set autoindent
-
 " Jump to the corresponding brace when inserting closing braces
 " for the given time, in tenths of a second
 set showmatch
