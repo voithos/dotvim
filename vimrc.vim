@@ -215,6 +215,9 @@ let NERDSpaceDelims=1
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
 if has("win32")
+    " Try DOS EOL first
+    set fileformats=dos,unix,mac
+
     " Fix shell options
     set shell=cmd.exe
     set shellcmdflag=/C
