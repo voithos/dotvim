@@ -4,9 +4,59 @@
 
 " ------------------------------- System ---------------------------------
 " ------------------------------------------------------------------------
-" Enable pathogen
-call pathogen#infect()
-call pathogen#helptags()
+
+" --------- Vundle ---------
+" --------------------------
+
+if has("win32")
+    set runtimepath+=~/vimfiles/bundle/vundle
+else
+    set runtimepath+=~/.vim/bundle/vundle
+endif
+
+filetype off
+
+" Setup vundle
+call vundle#rc()
+
+" Let vundle manage vundle
+Bundle 'gmarik/vundle'
+
+" Original repos
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-repeat'
+Bundle 'garbas/vim-snipmate'
+Bundle 'tpope/vim-surround'
+Bundle 'tomtom/tlib_vim'
+
+" Original mirrors
+Bundle 'voithos/vim-multiselect'
+Bundle 'voithos/vim-python-matchit'
+Bundle 'voithos/vim-python-syntax'
+
+" Forks
+Bundle 'voithos/a.vim'
+Bundle 'voithos/vim-colorpack'
+Bundle 'voithos/snipmate-snippets'
+
+" vim-scripts repos
+Bundle 'cool.vim'
+Bundle 'genutils'
+Bundle 'matchit.zip'
+Bundle 'taglist.vim'
+
+" --------------------------
+
+" Turn on filetype plugin and indentation handling
+filetype plugin indent on
+
 
 " Set map leader
 let mapleader = ','
@@ -80,11 +130,8 @@ set lazyredraw
 " Make backspace more flexible
 set backspace=eol,start,indent
 
-" Turn on file-dependent features like syntax highlighting
-" and indentation
+" Turn on syntax highlighting
 syntax enable
-filetype plugin on
-filetype indent on
 
 " Set the tab stop to the given value and enable tab-to-space expansion
 set tabstop=4
