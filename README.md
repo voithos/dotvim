@@ -1,7 +1,7 @@
 dotvim
 ======
 
-An organic Vim configuration, using Pathogen.
+An organic Vim configuration, using Vundle.
 
 This is more or less a representation of my `~/.vim` directory.
 A symlink can be used to reference the `vimrc.vim` file.
@@ -19,6 +19,12 @@ First, clone the project:
     cd
     git clone --recursive git://github.com/voithos/dotvim.git .vim
 
-Then, create the symlink:
+Next, create the symlink:
     
     ln -s ~/.vim/vimrc.vim ~/.vimrc
+
+Finally, run Vundle to install the plugins:
+
+    :BundleInstall
+
+Success!
