@@ -181,7 +181,11 @@ set nowrap
 set listchars=eol:¬,tab:»­,trail:·
 
 " Enable an warning when exceeding a certain line length
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+if &background == 'light'
+    highlight OverLength ctermbg=lightred ctermfg=white guibg=#FA8072 guifg=#1C1C1C
+else
+    highlight OverLength ctermbg=lightred ctermfg=white guibg=#A52A2A guifg=#F5F5F5
+endif
 match OverLength /\%121v.\+/ " The configured length in the regex
 
 " Enable line numbers
