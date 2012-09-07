@@ -223,7 +223,10 @@ set hlsearch
 " ------------------------------ Mappings --------------------------------
 " ------------------------------------------------------------------------
 " Map list command
-nmap <leader>l :set list!<CR>
+nmap <silent> <leader>l :set list!<CR>
+
+" Map overflow clear
+map <silent> <leader>o :highlight clear OverLength<CR>
 
 " Map CTRL+L to clear highlight search
 map <silent> <C-L> :silent nohlsearch<CR>
