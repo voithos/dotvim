@@ -28,6 +28,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'nacitar/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-ragtag'
@@ -42,7 +43,6 @@ Bundle 'voithos/vim-python-matchit'
 Bundle 'voithos/vim-python-syntax'
 
 " Forks
-Bundle 'voithos/a.vim'
 Bundle 'voithos/vim-colorpack'
 Bundle 'voithos/snipmate-snippets'
 
