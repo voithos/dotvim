@@ -48,6 +48,7 @@ Bundle 'voithos/snipmate-snippets'
 
 " vim-scripts repos
 Bundle 'cool.vim'
+Bundle 'django.vim'
 Bundle 'genutils'
 Bundle 'matchit.zip'
 Bundle 'taglist.vim'
