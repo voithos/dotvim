@@ -186,7 +186,7 @@ if &background == 'light'
 else
     highlight OverLength ctermbg=lightred ctermfg=white guibg=#A52A2A guifg=#F5F5F5
 endif
-match OverLength /\%121v.\+/ " The configured length in the regex
+match OverLength /\%80v.\+/ " The configured length in the regex
 
 " Enable line numbers
 set number
