@@ -24,6 +24,7 @@ Bundle 'gmarik/vundle'
 
 " Original repos
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
@@ -48,7 +49,6 @@ Bundle 'voithos/snipmate-snippets'
 
 " vim-scripts repos
 Bundle 'cool.vim'
-Bundle 'django.vim'
 Bundle 'genutils'
 Bundle 'matchit.zip'
 Bundle 'taglist.vim'
