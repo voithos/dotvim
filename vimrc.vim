@@ -161,6 +161,9 @@ if has("gui_running")
     " Set theme options
     colorscheme solarized
     set background=light
+
+    " Set font
+    set guifont=Source\ Code\ Pro\ 10
 else
     " Enable more colors for the terminal
     set t_Co=256
