@@ -24,6 +24,7 @@ Bundle 'gmarik/vundle'
 
 " Original repos
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'derekwyatt/vim-scala'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5.vim'
