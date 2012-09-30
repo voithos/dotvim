@@ -49,6 +49,7 @@ Bundle 'voithos/vim-colorpack'
 Bundle 'voithos/snipmate-snippets'
 
 " vim-scripts repos
+Bundle 'bufkill.vim'
 Bundle 'cool.vim'
 Bundle 'genutils'
 Bundle 'matchit.zip'
@@ -231,7 +232,10 @@ set hlsearch
 nmap <silent> <leader>l :set list!<CR>
 
 " Map overflow clear
-map <silent> <leader>o :highlight clear OverLength<CR>
+nmap <silent> <leader>o :highlight clear OverLength<CR>
+
+" Map window switching shortcut
+nmap <silent> <leader>w <C-W><C-W>
 
 " Map CTRL+L to clear highlight search
 map <silent> <C-L> :silent nohlsearch<CR>
@@ -260,11 +264,19 @@ nnoremap ` '
 nmap <CR> o<Esc>0d$
 nmap <S-CR> O<Esc>0d$
 
+" Map buffer navigation easier
+nmap <silent> <leader>j :bn<CR>
+nmap <silent> <leader>k :bp<CR>
+
 " Make the arrow keys useful
-nmap <silent> <down> <ESC>:bn<CR>
-nmap <silent> <up> <ESC>:bp<CR>
-nmap <silent> <left> <ESC>:NERDTreeToggle<CR>
-nmap <silent> <right> <ESC>:Tlist<CR>
+nmap <silent> <down> :bn<CR>
+nmap <silent> <up> :bp<CR>
+nmap <silent> <left> :NERDTreeToggle<CR>
+nmap <silent> <right> :Tlist<CR>
+
+" Map easier shortcuts to common plugins
+nmap <silent> <leader>t :NERDTreeToggle<CR>
+nmap <silent> <leader>q :BD<CR> " Close buffer without closing window
 
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
