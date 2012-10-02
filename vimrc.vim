@@ -304,5 +304,8 @@ if has("win32")
 
     " Fix font
     set guifont=Consolas:h10:b:cANSI
+
+    " Switch to tabs
+    set noexpandtab
 endif
 
