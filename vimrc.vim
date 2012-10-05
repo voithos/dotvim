@@ -276,7 +276,7 @@ nmap <silent> <right> :Tlist<CR>
 
 " Map easier shortcuts to common plugins
 nmap <silent> <leader>t :NERDTreeToggle<CR>
-nmap <silent> <leader>q :BD<CR> " Close buffer without closing window
+nmap <silent> <leader>q :BW<CR> " Close buffer without closing window
 
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
