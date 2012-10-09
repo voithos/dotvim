@@ -52,6 +52,7 @@ Bundle 'voithos/snipmate-snippets'
 Bundle 'bufkill.vim'
 Bundle 'cool.vim'
 Bundle 'genutils'
+Bundle 'guifontpp.vim'
 Bundle 'matchit.zip'
 Bundle 'taglist.vim'
 
