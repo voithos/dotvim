@@ -33,6 +33,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'nacitar/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
 Bundle 'garbas/vim-snipmate'
@@ -278,6 +279,7 @@ nmap <silent> <right> :Tlist<CR>
 " Map easier shortcuts to common plugins
 nmap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <silent> <leader>q :BW<CR> " Close buffer without closing window
+nmap <silent> <leader>g :GundoToggle<CR>
 
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
