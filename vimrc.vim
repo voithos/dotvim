@@ -164,8 +164,8 @@ if has("gui_running")
     set guioptions-=T
 
     " Set theme options
-    colorscheme solarized
-    set background=light
+    colorscheme badwolf
+    set background=dark
 
     " Set font
     set guifont=Source\ Code\ Pro\ 10
