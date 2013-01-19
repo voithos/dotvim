@@ -28,10 +28,12 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'hail2u/vim-css3-syntax'
-Bundle 'othree/html5.vim'
-Bundle 'pangloss/vim-javascript'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'nacitar/a.vim'
+Bundle 'nono/vim-handlebars'
+Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
@@ -168,7 +170,7 @@ if has("gui_running")
     set background=dark
 
     " Set font
-    set guifont=Source\ Code\ Pro\ 10
+    set guifont=Ubuntu\ Mono\ 12
 else
     " Enable more colors for the terminal
     set t_Co=256
@@ -210,7 +212,8 @@ set cmdheight=2
 " Enable status line for all files
 set laststatus=2
 
-" Set the status line to show useful information
+" Set the status line to show useful information, in case Powerline
+" is not installed
 set statusline=\ %F%m%r%h\ %w\ \ [%{&ff}]%y\ Line:\ %l/%L:%c\ (%p%%)
 
 " Always report number of lines modified
@@ -288,6 +291,9 @@ nmap <silent> <leader>g :GundoToggle<CR>
 " NERDCommenter
 let NERDSpaceDelims=1
 
+" Powerline
+let g:Powerline_symbols = 'fancy'
+
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
 if has("win32")
@@ -312,5 +318,8 @@ if has("win32")
 
     " Switch to tabs
     set noexpandtab
+
+    " Don't try to use special symbols for powerline
+    let g:Powerline_symbols = 'compatible'
 endif
 

@@ -11,6 +11,9 @@ unless you're just experimenting. However, poking around the
 configuration to get inspiration for your own `vimrc` is
 a great use of time.
 
+Note that you may need to install/patch some fonts in order to make
+use of Lokaltog/vim-powerline.
+
 Installing
 ----------
 
@@ -19,7 +22,7 @@ First, clone the project:
     cd
     git clone --recursive git://github.com/voithos/dotvim.git .vim
 
-Next, create the symlink:
+Next, create the symlink (or copy, if you're on Windows):
     
     ln -s ~/.vim/vimrc.vim ~/.vimrc
 
