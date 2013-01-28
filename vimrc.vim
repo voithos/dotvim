@@ -170,7 +170,11 @@ if has("gui_running")
     set background=dark
 
     " Set font
-    set guifont=Ubuntu\ Mono\ 12
+    if has("win32")
+        set guifont=Consolas:h10:b:cANSI
+    else
+        set guifont=Source\ Code\ Pro\ For\ Powerline\ 10
+    endif
 else
     " Enable more colors for the terminal
     set t_Co=256
@@ -312,9 +316,6 @@ if has("win32")
 
     " Specify undo directory
     set undodir=~/vimfiles/undo
-
-    " Fix font
-    set guifont=Consolas:h10:b:cANSI
 
     " Switch to tabs
     set noexpandtab
