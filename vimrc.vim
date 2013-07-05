@@ -29,6 +29,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'nacitar/a.vim'
@@ -37,12 +38,14 @@ Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tlib_vim'
+Bundle 'Valloric/YouCompleteMe'
 
 " Original mirrors
 Bundle 'voithos/vim-multiselect'
@@ -298,6 +301,11 @@ let NERDSpaceDelims=1
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
+
+" Syntastic
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': [] }
 
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
