@@ -242,9 +242,6 @@ set hlsearch
 " Map list command
 nmap <silent> <leader>l :set list!<CR>
 
-" Map overflow clear
-nmap <silent> <leader>o :highlight clear OverLength<CR>
-
 " Map window switching shortcut
 nmap <silent> <leader>w <C-W><C-W>
 
