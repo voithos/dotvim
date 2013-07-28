@@ -292,6 +292,9 @@ nmap <silent> <leader>g :GundoToggle<CR>
 " NERDCommenter
 let NERDSpaceDelims=1
 
+" NERDTree
+let NERDTreeIgnore = ['\.pyc$']
+
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
