@@ -32,6 +32,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'mattn/zencoding-vim'
 Bundle 'nacitar/a.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'othree/html5.vim'
@@ -301,6 +302,9 @@ let g:Powerline_symbols = 'fancy'
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': [] }
+
+" Zencoding
+let g:user_zen_leader_key = '<c-j>'
 
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
