@@ -272,9 +272,26 @@ nnoremap ` '
 nmap <CR> o<Esc>0d$
 nmap <S-CR> O<Esc>0d$
 
+" Helper functions to avoid BufChange'ing the NERD tree window
+function! BufNext()
+    if exists("t:NERDTreeBufName")
+        if bufnr(t:NERDTreeBufName) != bufnr('')
+            bn
+        endif
+    endif
+endfunction
+
+function! BufPrev()
+    if exists("t:NERDTreeBufName")
+        if bufnr(t:NERDTreeBufName) != bufnr('')
+            bp
+        endif
+    endif
+endfunction
+
 " Map buffer navigation easier
-nmap <silent> <leader>j :bn<CR>
-nmap <silent> <leader>k :bp<CR>
+nmap <silent> <leader>j :call BufNext()<CR>
+nmap <silent> <leader>k :call BufPrev()<CR>
 
 " Make the arrow keys useful
 nmap <silent> <down> :bn<CR>
