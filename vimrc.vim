@@ -152,6 +152,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Make sure that makefiles don't break
+autocmd FileType make setlocal noexpandtab
+
 " Make sure that <BS> deletes a "shiftwidth" worth of spaces
 set smarttab
 
