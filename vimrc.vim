@@ -25,6 +25,7 @@ Bundle 'gmarik/vundle'
 " Original repos
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'digitaltoad/vim-jade'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Glench/Vim-Jinja2-Syntax'
@@ -46,7 +47,6 @@ Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tlib_vim'
-Bundle 'Valloric/YouCompleteMe'
 
 " Original mirrors
 Bundle 'voithos/vim-multiselect'
