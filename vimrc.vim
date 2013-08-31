@@ -174,7 +174,7 @@ if has("gui_running")
     set guioptions-=T
 
     " Set theme options
-    colorscheme badwolf
+    colorscheme molokai
     set background=dark
 
     " Set font
