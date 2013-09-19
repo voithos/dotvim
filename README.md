@@ -22,9 +22,13 @@ First, clone the project:
     cd
     git clone --recursive git://github.com/voithos/dotvim.git .vim
 
-Next, create the symlink (or copy, if you're on Windows):
+Next, create the symlink for `vimrc` (or copy, if you're on Windows):
     
     ln -s ~/.vim/vimrc.vim ~/.vimrc
+
+If you're on a \*nix system, you'll need to patched fonts.
+
+    cp ~/.vim/fonts/*.otf ~/.fonts/
 
 Finally, run Vundle to install the plugins:
 
