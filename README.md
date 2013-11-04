@@ -26,7 +26,7 @@ Next, create the symlink for `vimrc` (or copy, if you're on Windows):
     
     ln -s ~/.vim/vimrc.vim ~/.vimrc
 
-If you're on a \*nix system, you'll need to patched fonts.
+If you're on a \*nix system, you'll need the patched fonts.
 
     cp ~/.vim/fonts/*.otf ~/.fonts/
 
