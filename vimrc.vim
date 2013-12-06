@@ -271,6 +271,10 @@ vmap <C-P> "+gP
 nnoremap ' `
 nnoremap ` '
 
+" Same with the colon and semicolon; colon is used very often
+nnoremap : ;
+nnoremap ; :
+
 " Map Enter and Shift-Enter to insert newlines below and above the cursor
 nmap <CR> o<Esc>0d$
 nmap <S-CR> O<Esc>0d$
