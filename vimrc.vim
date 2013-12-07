@@ -243,29 +243,26 @@ set hlsearch
 " ------------------------------ Mappings --------------------------------
 " ------------------------------------------------------------------------
 " Map list command
-nmap <silent> <leader>l :set list!<CR>
+nnoremap <silent> <leader>l :set list!<CR>
 
 " Map window switching shortcut
-nmap <silent> <leader>w <C-W><C-W>
+nnoremap <silent> <leader>w <C-W><C-W>
 
 " Map CTRL+L to clear highlight search
-map <silent> <C-L> :silent nohlsearch<CR>
+noremap <silent> <C-L> :silent nohlsearch<CR>
 
 " Map CTRL+Backspace to delete words in insert mode
-imap <C-BS> <C-W>
-
-" Map CTRL+Delete to delete words in front of the cursor in insert mode
-imap <C-Del> <C-[>dawi
+inoremap <C-BS> <C-W>
 
 " Map CTRL+S to select all
-nmap <C-S> ggVG
+nnoremap <C-S> ggVG
 
 " Map CTRL+P, CTRL+X and CTRL+Y for clipboard register paste and copy operations
-nmap <C-P> "+gp
-imap <C-P> <ESC><C-P>a
-vmap <C-X> "+d
-vmap <C-Y> "+y
-vmap <C-P> "+gP
+nnoremap <C-P> "+gp
+inoremap <C-P> <ESC><C-P>a
+vnoremap <C-X> "+d
+vnoremap <C-Y> "+y
+vnoremap <C-P> "+gP
 
 " Replace the backtick with the apostrophe, for better accessibility
 nnoremap ' `
@@ -276,8 +273,8 @@ nnoremap : ;
 nnoremap ; :
 
 " Map Enter and Shift-Enter to insert newlines below and above the cursor
-nmap <CR> o<Esc>0d$
-nmap <S-CR> O<Esc>0d$
+nnoremap <CR> o<Esc>0d$
+nnoremap <S-CR> O<Esc>0d$
 
 " Helper functions to avoid BufChange'ing the NERD tree window
 function! BufNext()
@@ -285,6 +282,8 @@ function! BufNext()
         if bufnr(t:NERDTreeBufName) != bufnr('')
             bn
         endif
+    else
+        bn
     endif
 endfunction
 
@@ -293,23 +292,25 @@ function! BufPrev()
         if bufnr(t:NERDTreeBufName) != bufnr('')
             bp
         endif
+    else
+        bp
     endif
 endfunction
 
 " Map buffer navigation easier
-nmap <silent> <leader>j :call BufNext()<CR>
-nmap <silent> <leader>k :call BufPrev()<CR>
+nnoremap <silent> <leader>j :call BufNext()<CR>
+nnoremap <silent> <leader>k :call BufPrev()<CR>
 
 " Make the arrow keys useful
-nmap <silent> <down> :bn<CR>
-nmap <silent> <up> :bp<CR>
-nmap <silent> <left> :NERDTreeToggle<CR>
-nmap <silent> <right> :Tlist<CR>
+nnoremap <silent> <down> :bn<CR>
+nnoremap <silent> <up> :bp<CR>
+nnoremap <silent> <left> :NERDTreeToggle<CR>
+nnoremap <silent> <right> :Tlist<CR>
 
 " Map easier shortcuts to common plugins
-nmap <silent> <leader>t :NERDTreeToggle<CR>
-nmap <silent> <leader>q :BW<CR> " Close buffer without closing window
-nmap <silent> <leader>g :GundoToggle<CR>
+nnoremap <silent> <leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <leader>q :BW<CR> " Close buffer without closing window
+nnoremap <silent> <leader>g :GundoToggle<CR>
 
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
