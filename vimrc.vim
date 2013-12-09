@@ -259,7 +259,7 @@ nnoremap <C-S> ggVG
 
 " Map CTRL+P, CTRL+X and CTRL+Y for clipboard register paste and copy operations
 nnoremap <C-P> "+gp
-inoremap <C-P> <ESC><C-P>a
+inoremap <C-P> <ESC>"+gpa
 vnoremap <C-X> "+d
 vnoremap <C-Y> "+y
 vnoremap <C-P> "+gP
