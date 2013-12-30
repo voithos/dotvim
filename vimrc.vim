@@ -174,7 +174,7 @@ if has("gui_running")
     set guioptions-=T
 
     " Set theme options
-    colorscheme molokai
+    colorscheme badwolf
     set background=dark
 
     " Set font
@@ -271,10 +271,12 @@ nnoremap ` '
 " Same with the colon and semicolon; colon is used very often
 nnoremap : ;
 nnoremap ; :
+vnoremap : ;
+vnoremap ; :
 
 " Map Enter and Shift-Enter to insert newlines below and above the cursor
-nnoremap <CR> o<Esc>0d$
-nnoremap <S-CR> O<Esc>0d$
+nnoremap <CR> o<ESC>0d$
+nnoremap <S-CR> O<ESC>0d$
 
 " Helper functions to avoid BufChange'ing the NERD tree window
 function! BufNext()
@@ -297,20 +299,28 @@ function! BufPrev()
     endif
 endfunction
 
+function! BufWipe()
+    if exists("t:NERDTreeBufName")
+        if bufnr(t:NERDTreeBufName) != bufnr('')
+            BW
+        endif
+    else
+        BW
+    endif
+endfunction
+
 " Map buffer navigation easier
 nnoremap <silent> <leader>j :call BufNext()<CR>
 nnoremap <silent> <leader>k :call BufPrev()<CR>
 
-" Make the arrow keys useful
-nnoremap <silent> <down> :bn<CR>
-nnoremap <silent> <up> :bp<CR>
-nnoremap <silent> <left> :NERDTreeToggle<CR>
-nnoremap <silent> <right> :Tlist<CR>
-
 " Map easier shortcuts to common plugins
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
-nnoremap <silent> <leader>q :BW<CR> " Close buffer without closing window
+nnoremap <silent> <leader>q :call BufWipe()<CR> " Close buffer without closing window
 nnoremap <silent> <leader>g :GundoToggle<CR>
+
+" Map timestamp functions
+nnoremap <F4> a<C-R>=strftime("%m/%d/%y")<CR><ESC>
+inoremap <F4> <C-R>=strftime("%m/%d/%y")<CR>
 
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
