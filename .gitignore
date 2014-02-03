@@ -1,6 +1,5 @@
 # History files
 .netrwhist
 
-# Vundle bundles
+# Bundles
 bundle
-!bundle/vundle

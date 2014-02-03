@@ -5,73 +5,77 @@
 " ------------------------------- System ---------------------------------
 " ------------------------------------------------------------------------
 
-" --------- Vundle ---------
-" --------------------------
+" --------- Plugin Manager ---------
+" ----------------------------------
 
+" Setup NeoBundle
 if has("win32")
-    set runtimepath+=~/vimfiles/bundle/vundle
+    set runtimepath+=~/vimfiles/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/vimfiles/bundle/'))
 else
-    set runtimepath+=~/.vim/bundle/vundle
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
-filetype off
-
-" Setup vundle
-call vundle#rc()
-
-" Let vundle manage vundle
-Bundle 'gmarik/vundle'
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Original repos
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'Glench/Vim-Jinja2-Syntax'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'mattn/zencoding-vim'
-Bundle 'nacitar/a.vim'
-Bundle 'nono/vim-handlebars'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'suan/vim-instant-markdown'
-Bundle 'tikhomirov/vim-glsl'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tomtom/tlib_vim'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'nacitar/a.vim'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'suan/vim-instant-markdown'
+NeoBundle 'tikhomirov/vim-glsl'
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'vim-scripts/cool.vim'
+NeoBundle 'vim-scripts/genutils'
+NeoBundle 'vim-scripts/ini-syntax-definition'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'vim-scripts/taglist.vim'
 
 " Original mirrors
-Bundle 'voithos/vim-multiselect'
-Bundle 'voithos/vim-python-matchit'
-Bundle 'voithos/vim-python-syntax'
+NeoBundle 'voithos/vim-multiselect'
+NeoBundle 'voithos/vim-python-matchit'
+NeoBundle 'voithos/vim-python-syntax'
 
 " Forks
-Bundle 'voithos/vim-colorpack'
-Bundle 'voithos/snipmate-snippets'
+NeoBundle 'voithos/vim-colorpack'
+NeoBundle 'voithos/snipmate-snippets'
 
-" vim-scripts repos
-Bundle 'bufkill.vim'
-Bundle 'cool.vim'
-Bundle 'genutils'
-Bundle 'ini-syntax-definition'
-Bundle 'matchit.zip'
-Bundle 'taglist.vim'
-
-" --------------------------
+" Platform-specific
+if has("win32")
+    NeoBundle 'vim-scripts/aspnetcs'
+else
+    NeoBundle 'Lokaltog/vim-powerline'
+endif
 
 " Turn on filetype plugin and indentation handling
 filetype plugin indent on
 
+NeoBundleCheck
+
+" --------------------------
 
 " Set map leader
 let mapleader = ','
@@ -258,12 +262,11 @@ inoremap <C-BS> <C-W>
 " Map CTRL+S to select all
 nnoremap <C-S> ggVG
 
-" Map CTRL+P, CTRL+X and CTRL+Y for clipboard register paste and copy operations
-nnoremap <C-P> "+gp
-inoremap <C-P> <ESC>"+gpa
-vnoremap <C-X> "+d
-vnoremap <C-Y> "+y
-vnoremap <C-P> "+gP
+" Map clipboard register paste and copy operations
+nnoremap <leader>p "+gp
+vnoremap <leader>x "+d
+vnoremap <leader>y "+y
+vnoremap <leader>p "+gP
 
 " Replace the backtick with the apostrophe, for better accessibility
 nnoremap ' `
@@ -363,8 +366,5 @@ if has("win32")
 
     " Switch to tabs
     set noexpandtab
-
-    " Don't try to use special symbols for powerline
-    let g:Powerline_symbols = 'compatible'
 endif
 
