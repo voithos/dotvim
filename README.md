@@ -1,7 +1,7 @@
 dotvim
 ======
 
-An organic Vim configuration, using Vundle.
+An organic Vim configuration.
 
 This is more or less a representation of my `~/.vim` directory.
 A symlink can be used to reference the `vimrc.vim` file.
@@ -30,8 +30,7 @@ If you're on a \*nix system, you'll need the patched fonts.
 
     cp ~/.vim/fonts/*.otf ~/.fonts/
 
-Finally, run Vundle to install the plugins:
-
-    :BundleInstall
+Finally, just start up Vim, and NeoBundle will prompt you to install
+your plugins.
 
 Success!
