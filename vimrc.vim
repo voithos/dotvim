@@ -144,9 +144,9 @@ set formatoptions=q
 " Do not redraw while running macros
 set lazyredraw
 
-" Disable timeout, to avoid lag when using <ESC> in terminal vim
+" Lower keycode timeout, to avoid lag when using <ESC> in terminal vim
 " (ESC is a common starting character for terminal escape sequences)
-set timeoutlen=0
+set ttimeoutlen=100
 
 " ------------------------------- Editing --------------------------------
 " ------------------------------------------------------------------------
@@ -348,6 +348,9 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 
 " Zencoding
 let g:user_zen_leader_key = '<c-j>'
+
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
