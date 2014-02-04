@@ -144,6 +144,10 @@ set formatoptions=q
 " Do not redraw while running macros
 set lazyredraw
 
+" Disable timeout, to avoid lag when using <ESC> in terminal vim
+" (ESC is a common starting character for terminal escape sequences)
+set timeoutlen=0
+
 " ------------------------------- Editing --------------------------------
 " ------------------------------------------------------------------------
 " Make backspace more flexible
