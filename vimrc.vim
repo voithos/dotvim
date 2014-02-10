@@ -267,10 +267,10 @@ inoremap <C-BS> <C-W>
 nnoremap <C-S> ggVG
 
 " Map clipboard register paste and copy operations
-nnoremap <leader>p "+gp
-vnoremap <leader>x "+d
-vnoremap <leader>y "+y
-vnoremap <leader>p "+gP
+nnoremap <C-P> "+gp
+vnoremap <C-X> "+d
+vnoremap <C-Y> "+y
+vnoremap <C-P> "+gP
 
 " Replace the backtick with the apostrophe, for better accessibility
 nnoremap ' `
@@ -350,6 +350,8 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let g:user_zen_leader_key = '<c-j>'
 
 " CtrlP
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 " ------------------------ Environment-Specific --------------------------
