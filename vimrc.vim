@@ -351,7 +351,6 @@ let g:user_zen_leader_key = '<c-j>'
 
 " CtrlP
 let g:ctrlp_map = '<c-f>'
-let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 " ------------------------ Environment-Specific --------------------------
