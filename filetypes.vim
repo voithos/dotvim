@@ -6,3 +6,6 @@ au BufNewFile,BufRead *.flex set filetype=lex
 
 " ASP.NET ASMX
 au BufNewFile,BufRead *.asmx set filetype=cs
+
+" Markdown (auto-detected as Modula 2)
+au BufNewFile,BufRead *.md set filetype=markdown
