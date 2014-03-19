@@ -352,7 +352,7 @@ let g:user_zen_leader_key = '<c-j>'
 
 " CtrlP
 let g:ctrlp_map = '<leader>f'
-let g:ctrlp_custom_ignore = 'node_modules\|git'
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
