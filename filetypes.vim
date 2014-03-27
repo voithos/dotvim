@@ -15,3 +15,5 @@ au BufNewFile,BufRead *.md set filetype=markdown
 "
 au FileType ruby setlocal sw=2 ts=2 sts=2
 au FileType yaml setlocal sw=2 ts=2 sts=2
+
+au FileType make setlocal noexpandtab  " Makefiles *require* tabs
