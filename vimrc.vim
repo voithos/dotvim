@@ -267,6 +267,7 @@ nnoremap <C-S> ggVG
 
 " Map clipboard register paste and copy operations
 nnoremap <C-P> "+gp
+inoremap <C-P> <C-R>+
 vnoremap <C-X> "+d
 vnoremap <C-Y> "+y
 vnoremap <C-P> "+gP
