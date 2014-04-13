@@ -118,6 +118,9 @@ set backup
 set undodir=~/.vim/undo
 set undofile
 
+" Specify spelling file
+set spellfile=~/.vim/spell/spell.utf-8.add
+
 " Enable viminfo file, and create autocmd to restore file
 " position between edits
 set viminfo='10,<100,:20,%
@@ -250,6 +253,9 @@ set hlsearch
 
 " ------------------------------ Mappings --------------------------------
 " ------------------------------------------------------------------------
+" Map spellcheck toggle
+nnoremap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
+
 " Map list command
 nnoremap <silent> <leader>l :set list!<CR>
 
@@ -371,6 +377,9 @@ if has("win32")
 
     " Specify undo directory
     set undodir=~/vimfiles/undo
+
+    " Specify spelling file
+    set spellfile=~/vimfiles/spell/spell.utf-8.add
 
     " Switch to tabs
     set noexpandtab
