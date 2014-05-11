@@ -22,6 +22,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Original repos
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'editorconfig/editorconfig-vim'
@@ -69,7 +70,8 @@ NeoBundle 'voithos/snipmate-snippets'
 if has("win32")
     NeoBundle 'vim-scripts/aspnetcs'
 else
-    NeoBundle 'Lokaltog/vim-powerline'
+    NeoBundle 'majutsushi/tagbar'
+    NeoBundle 'vim-scripts/AutoTag'
 endif
 
 " Turn on filetype plugin and indentation handling
@@ -230,8 +232,7 @@ set cmdheight=2
 " Enable status line for all files
 set laststatus=2
 
-" Set the status line to show useful information, in case Powerline
-" is not installed
+" Set the status line to show useful information
 set statusline=\ %F%m%r%h\ %w\ \ [%{&ff}]%y\ Line:\ %l/%L:%c\ (%p%%)
 
 " Always report number of lines modified
@@ -331,6 +332,7 @@ nnoremap <silent> <leader>k :call BufPrev()<CR>
 nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>q :call BufWipe()<CR> " Close buffer without closing window
 nnoremap <silent> <leader>g :GundoToggle<CR>
+nnoremap <silent> <leader>e :TagbarToggle<CR>
 
 " Map timestamp functions
 nnoremap <F4> a<C-R>=strftime("%m/%d/%y")<CR><ESC>
@@ -344,8 +346,9 @@ let NERDSpaceDelims=1
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$']
 
-" Powerline
-let g:Powerline_symbols = 'fancy'
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive',
