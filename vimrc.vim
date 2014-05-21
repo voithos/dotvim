@@ -386,5 +386,8 @@ if has("win32")
 
     " Switch to tabs
     set noexpandtab
+
+    " No powerline fonts
+    let g:airline_powerline_fonts = 0
 endif
 
