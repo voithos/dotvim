@@ -340,6 +340,8 @@ nnoremap <silent> <leader>e :TagbarToggle<CR>
 " Map timestamp functions
 nnoremap <F4> a<C-R>=strftime("%m/%d/%y")<CR><ESC>
 inoremap <F4> <C-R>=strftime("%m/%d/%y")<CR>
+nnoremap <F3> a<C-R>=strftime("%Y-%m-%d %a")<CR>
+inoremap <F3> <C-R>=strftime("%Y-%m-%d %a")<CR>
 
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
