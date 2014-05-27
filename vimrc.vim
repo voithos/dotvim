@@ -217,6 +217,9 @@ set nowrap
 " Set whitespace characters to use when using list
 set listchars=eol:¬,tab:»\ ,trail:·
 
+" Set list by default
+set list
+
 " Enable an warning when exceeding a certain line length
 set colorcolumn=80
 
