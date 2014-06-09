@@ -84,19 +84,6 @@ NeoBundleCheck
 " Set map leader
 let mapleader = ','
 
-" Includes
-if has("win32")
-    " Add extra filetypes
-    source ~/vimfiles/filetypes.vim
-    " Extra helper functions
-    source ~/vimfiles/functions.vim
-else
-    " Add extra filetypes
-    source ~/.vim/filetypes.vim
-    " Extra helper functions
-    source ~/.vim/functions.vim
-endif
-
 " ------------------------------- General --------------------------------
 " ------------------------------------------------------------------------
 " Make Vim more useful than Vi
@@ -396,3 +383,17 @@ if has("win32")
     let g:airline_powerline_fonts = 0
 endif
 
+" ------------------------------ Includes --------------------------------
+" ------------------------------------------------------------------------
+
+if has("win32")
+    " Add extra filetypes
+    source ~/vimfiles/filetypes.vim
+    " Extra helper functions
+    source ~/vimfiles/functions.vim
+else
+    " Add extra filetypes
+    source ~/.vim/filetypes.vim
+    " Extra helper functions
+    source ~/.vim/functions.vim
+endif
