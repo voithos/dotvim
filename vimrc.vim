@@ -97,10 +97,10 @@ set hidden
 
 " Set the directory of the swap file
 " The // indicates that the swap name should be globally unique
-set directory=~/.vim/tmp//,/tmp
+set directory=~/.vim/tmp//,/tmp//
 
 " Enable backup files and specify backup directories
-set backupdir=~/.vim/backup/,/tmp
+set backupdir=~/.vim/backup//,/tmp//
 set backup
 
 " Enable undo
@@ -368,7 +368,7 @@ if has("win32")
     set directory=~/vimfiles/tmp//,$TMP
 
     " Specify backup directory
-    set backupdir=~/vimfiles/backup/,$TMP
+    set backupdir=~/vimfiles/backup//,$TMP
 
     " Specify undo directory
     set undodir=~/vimfiles/undo
