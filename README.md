@@ -20,7 +20,7 @@ Installing
 First, clone the project:
 
     cd
-    git clone --recursive git://github.com/voithos/dotvim.git .vim
+    git clone --recursive https://github.com/voithos/dotvim.git .vim
 
 Next, create the symlink for `vimrc` (or copy, if you're on Windows):
     
