@@ -26,9 +26,9 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'kien/ctrlp.vim'
@@ -43,6 +43,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tikhomirov/vim-glsl'
@@ -65,7 +66,6 @@ NeoBundle 'voithos/vim-python-syntax'
 
 " Forks
 NeoBundle 'voithos/vim-colorpack'
-NeoBundle 'voithos/snipmate-snippets'
 
 " Platform-specific
 if has("win32")
@@ -348,8 +348,10 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': [] }
 
-" Zencoding
-let g:user_zen_leader_key = '<c-j>'
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " CtrlP
 let g:ctrlp_map = '<leader>f'
