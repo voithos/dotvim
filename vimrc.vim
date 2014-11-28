@@ -23,12 +23,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Original repos
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'cespare/vim-toml'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -54,6 +56,7 @@ NeoBundle 'vim-scripts/genutils'
 NeoBundle 'vim-scripts/ini-syntax-definition'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'wting/rust.vim'
 
 " Original mirrors
 NeoBundle 'voithos/vim-multiselect'
@@ -320,6 +323,7 @@ nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <leader>q :call BufWipe()<CR> " Close buffer without closing window
 nnoremap <silent> <leader>g :GundoToggle<CR>
 nnoremap <silent> <leader>e :TagbarToggle<CR>
+nnoremap <silent> <leader>a :Ag ''<LEFT>
 
 " Map timestamp functions
 nnoremap <F4> a<C-R>=strftime("%m/%d/%y")<CR><ESC>
@@ -330,7 +334,7 @@ inoremap <F3> <C-R>=strftime("%Y-%m-%d %a")<CR>
 " ------------------------------- Plugins --------------------------------
 " ------------------------------------------------------------------------
 " NERDCommenter
-let NERDSpaceDelims=1
+let NERDSpaceDelims = 1
 
 " NERDTree
 let NERDTreeIgnore = ['\.pyc$']
@@ -345,13 +349,16 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'passive_filetypes': [] }
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
 " CtrlP
 let g:ctrlp_map = '<leader>f'
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" Emmet
+let g:user_emmet_leader_key = '<C-Z>'
 
 " ------------------------ Environment-Specific --------------------------
 " ------------------------------------------------------------------------
